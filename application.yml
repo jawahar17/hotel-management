@@ -1,1 +1,25 @@
 ## add yours Details
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8585/eureka
+ 
+ 
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    
+    
+management:
+  endpoint:
+    health:
+      show-details: always 
+    shutdown:
+      enabled: true  
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"  
